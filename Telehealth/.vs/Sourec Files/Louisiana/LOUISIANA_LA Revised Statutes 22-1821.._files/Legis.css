@@ -1,0 +1,364 @@
+﻿@charset "UTF-8"
+
+/** LAlegis-style.css ************************************************/
+
+.first { color: Red }  /* for some reason (???) I need to place something in front of the "body" style in order for the body style to work */
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	background: url(images/BackGround.gif) repeat-x;
+}
+
+a {
+	text-decoration: none;
+	color: #5b63a1;
+}
+
+a:link {
+	color: #5b63a1;
+}
+
+a:hover{
+	text-decoration: underline;
+	color: #14194b;
+}
+
+a:visited {
+	color: #484e7e;
+}
+
+/*Links for controls*/
+.controllink:link {
+	color: #51536f;
+	font-style: italic;
+}
+
+.controllink:hover{
+	text-decoration: underline;
+	color: #6b73b4;
+}
+
+.controllink:visited {
+	color: #51536f;
+}
+/*end*/
+
+/*Header style for House and Senate boxes*/
+.title {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-transform: uppercase;
+	font-size: 1.0em;
+	color: #13184a; /*blue*/
+}
+/*end*/
+
+/*Header style for Section Head Titles*/
+.HeaderTitle {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #13184a; /*blue*/
+}
+/*end*/
+
+/*Header style for Titles within Section Head Titles*/
+.title2 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.0em;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #8e7c2a; /*gold*/
+}
+/*end*/
+
+#vertnavbg {
+	position: absolute;
+	top: 193px;
+	left: 0px;
+	background-color: #f2f0ea;
+	opacity: 0.75;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=70);
+	width: 207px;
+	height: 100%;
+}
+
+
+#bg {
+	position: absolute;
+	z-index: -1;
+	margin-top: 0px;
+	margin-left: 0px;
+	width: 1024px;
+	height: 800px;
+	background: url(Images/BackGround.jpg) no-repeat;
+}
+
+	
+
+/*********************************************************************/
+/*** menu stuff: *************************************************/
+
+.MainMenuStatic 
+{
+    font-weight:bold;
+    margin: 0px;
+	left: 0px;
+	width: 100%;	
+	padding: 0;
+	border: solid 1px #fff;
+	line-height: 100%;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+ 
+	background: #edece3; /* for non-css3 browsers */
+	background-image:url(images/nav-repeat.gif);
+	background-repeat: repeat-x;
+	
+	background: -moz-linear-gradient(top, #edece4 50%, #d5d2c2 50%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #edece3), color-stop(50%, #d5d2c2));
+	background: -webkit-linear-gradient(top, #edece4 50%, #d5d2c2 50%);
+	background: -o-linear-gradient(top, #edece4 50%, #d5d2c2 50%);
+}
+
+.MainMenuStatic a 
+{   
+    border-left: 1px solid #e1dfd6;
+	color: #13184a;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	padding: 9px 9px 9px 9px;
+	margin: 0;
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, .5);	
+}
+
+.MainMenuStatic a:focus  
+{   
+    outline: none;     /* Keeps a dotted-outline from appearing around the selected menuItem, when our user selects a target="_blank" link, such as "Senate" or "House. */	
+}
+
+.MainMenuStatic a:hover 
+{
+	background: #82722b; /* for non-css3 browsers */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbaa5b', endColorstr='#82722b'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#bbaa5b), to(#82722b)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #bbaa5b,  #82722b); /* for firefox 3.6+ */
+	color: #FFF;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, .5); 
+}
+
+.MainMenuDynamic {
+	background: #edece3; /* for non-css3 browsers */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#edece3', endColorstr='#d5d2c2'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#edece3), to(#d5d2c2)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #edece3,  #d5d2c2); /* for firefox 3.6+ */
+	display: none;
+	margin: 1px 0 0 0;
+	padding: 0;
+	top: 33px;
+	left: 0;
+	border: solid 1px #fff;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+	overflow: visible;
+}
+
+.MainMenuDynamic a 
+{
+	background: #edece3; /* for non-css3 browsers */
+    color: #13184a;
+    margin: 0;
+	padding: 8px 8px 8px 8px;
+    display: block;
+	font-weight: normal;
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, .9);
+}
+
+.MainMenuDynamic a:hover 
+{
+    text-decoration: none;
+	background: #8E7C2A !important; /* for non-css3 browsers */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbaa5b', endColorstr='#82722b'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#bbaa5b), to(#82722b)) !important; /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #bbaa5b,  #82722b) !important; /* for firefox 3.6+ */
+	color: #fff !important;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, .8);
+}
+
+/*.SidebarMenu { background-color:#EEEEEE; border-color:#EEEEEE; opacity:0.75; filter:alpha(opacity=75); } */
+
+.SidebarMenuStatic 
+{
+    font-weight:bold;	
+	left: 0px;
+	background-color: #f2f0ea;
+	opacity: 0.85;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+	filter: alpha(opacity=85);
+}
+
+.SidebarMenuStatic a 
+{
+	background: #f2f0ea; /* for non-css3 browsers */
+    padding:5px 15px;
+    color: #13184a;
+    display:block;
+    text-decoration:none;
+	line-height: 25px;
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, .5);	
+}
+
+.SidebarMenuStatic a:hover {
+    color: #fff;
+    background-color: #8e7c2a;
+    text-decoration:none;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, .5); 
+}
+
+.SidebarMenuDynamic {
+	background: #edece3; /* for non-css3 browsers */
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#edece3', endColorstr='#d5d2c2'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#edece3), to(#d5d2c2)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #edece3,  #d5d2c2); /* for firefox 3.6+ */
+	border: 1px solid #fff;
+}
+
+.SidebarMenuDynamic a {
+	background: #edece3; /* for non-css3 browsers */
+    color:#13184a;
+    padding:5px 15px;
+    display:block;
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, .9);
+}
+
+.SidebarMenuDynamic a:hover {
+    color: #fff;
+    background-color: #8e7c2a;
+    text-decoration:none;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, .8);
+}
+/*********************************************************************/
+
+.Settings { color: CornflowerBlue; font-family: Arial; font-size: small; font-style: italic; }
+a.Settings { color: CornflowerBlue; font-family: Arial; font-size: small; font-style: italic; text-decoration: underline; }
+
+/* Legis.master related formatting:  */
+.LoginLink { font-weight: bold; color: #8e7c2a; /*gold*/ }
+.LoginLink a { color: White; }
+
+/*
+.TopHeader { color:white; background-color:#556699; vertical-align:text-top; } 
+.MainMenu { text-align:center; background-color:#EEEEEE; border-color:#EEEEEE; width:100%; border-width:2px; border-style:Solid; font-size:large; }*/
+           /* position: absolute;	z-index: 2;	margin: 0;	top: 160px;	left: 0px;}*/
+
+
+/* end of Legis.master specific formatting. */ 
+
+
+/*
+.SidebarMenuStatic a { color: Navy; font-family: Arial; }    
+.SidebarMenuStatic a:visited { color: Navy; } 
+.SidebarMenuStatic a:hover   { color: White; text-decoration: none;}
+
+.SidebarMenuDynamic a { color: Black; }
+.SidebarMenuDynamic a:visited { color: Black;  }
+.SidebarMenuDynamic a:hover   { color: Navy; text-decoration: none;  }
+*/
+.CenterTable { margin-left: auto; margin-right: auto; }
+
+
+.AgendaDocsMenuStatic a { color:#9A0000; }
+.AgendaDocsMenuStaticHover a { color:Black; }
+
+.SubHeader { font-family: Times New Roman; font-weight: bold; font-size: large; color: Navy; }
+.PageHeader { font-family: Arial; font-weight: bold; font-size: larger; color: Black }
+
+.BackPanel { background-color:White; border-color:inherit; opacity:0.85; filter:alpha(opacity=85); }
+.BackPanelSolid { background-color:White; border-color:inherit;  }
+
+
+/* Search-related formatting: */
+.ResultsListTable { background-color:White; border-color:inherit; width:100%; 
+                    border-top-style:solid; border-top-width:thin; border-bottom-style:solid; border-bottom-width:thin;
+                  }
+                  
+.ResultsListRow { padding-bottom: 10px; }
+
+.ResultsListKeyword  { font-size: x-small; font-style: italic; }
+
+.ResultsListDark { background-color: #EEEEEE }  /* OLD:  { background-color: #CCCCCC }  */ 
+/* end of Search-related formatting. */
+
+
+.MeetingsChamberTitle { text-align:left; font-size:large; font-family: Times New Roman; color: #8e7c2a; /*gold*/ } 
+
+.VideoRooms { font-weight:bold; font-family:Verdana;  }
+.VideoRooms span { font-weight:bold; font-family:Verdana; color:ButtonText }
+
+/* SessionInfo-related formatting:  */
+/*.SInfo { font-family:Arial; font-size:smaller } */   /* Set page-wide attributes for SessionInfo pages */
+.SInfo { font-family:Arial; }   /* Set page-wide attributes for SessionInfo pages */
+.SInfoDates { color:#600000; font-weight:bold }   /* Used to format the session start/end dates sub-header */
+.SInfoDark td { background-color: #EEEEEE }       /* Used by SessionInfo pages for the alternating dark rows in their lists of items. */ 
+/* end of SessionInfo-related formatting. */
+
+.HideMe { color: Background; }   /* Used to hide objects until a mouseenter or mouseover event occurs (used by MyLegis.aspx) */
+
+.NewTab a { target-new: tab }
+
+.Overlay { position:fixed; top:0px; bottom:0px; left:0px; right:0px; overflow:hidden; 
+           padding:0; margin:0; background-color:#000; filter:alpha(opacity=40); 
+           opacity:0.4; z-index:1000; }
+ 
+.PopUpPanel { position:absolute; background:white; top:30%; left:35%; z-index:2001; 
+              padding:20px; min-width:400px; max-width:600px; border-radius:5px;
+              -moz-border-radiux:5px; -webkit-border-radiux:5px;
+              border:1px solid #CCCCCC; }
+              
+.PopUpWide { position:absolute; background:white; top:30%; left:20%; z-index:2001; 
+             padding:20px; min-width:400px; max-width:600px; border-radius:5px;
+             -moz-border-radiux:5px; -webkit-border-radiux:5px;
+             border: 1px solid #CCCCCC; }                
+                      
+.PopUpSessions { position:absolute; background:white; top:30%; left:20%; z-index:2001; 
+                 padding:20px; min-width:400px; max-width:800px; border-radius:5px;
+                 -moz-border-radiux:5px; -webkit-border-radiux:5px;
+                 border:1px solid #CCCCCC; }
+                 
+.PopUpNgoSessions { position:absolute; background:white; top:30%; left:30%; z-index:2001; 
+                 padding:20px; min-width:400px; max-width:800px; border-radius:5px;
+                 -moz-border-radiux:5px; -webkit-border-radiux:5px;
+                 border:1px solid #CCCCCC; }                 
+
+input[type=button]:hover 
+{
+	background-color:#8E7C2A;
+	color:White;
+	text-decoration: none;
+	background: #8E7C2A !important; /* for non-css3 browsers */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbaa5b', endColorstr='#82722b'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#bbaa5b), to(#82722b)) !important; /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #bbaa5b,  #82722b) !important; /* for firefox 3.6+ */
+	cursor:pointer
+}
+
+input[type=submit]:hover 
+{
+	background-color:#8E7C2A;
+	color:White;
+	text-decoration: none;
+	background: #8E7C2A !important; /* for non-css3 browsers */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbaa5b', endColorstr='#82722b'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#bbaa5b), to(#82722b)) !important; /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #bbaa5b,  #82722b) !important; /* for firefox 3.6+ */
+	cursor:pointer
+}

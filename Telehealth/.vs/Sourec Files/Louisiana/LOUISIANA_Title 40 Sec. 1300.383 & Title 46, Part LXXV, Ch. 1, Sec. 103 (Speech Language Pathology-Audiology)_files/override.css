@@ -1,0 +1,7 @@
+div.has-error input[type="text"],
+div.has-error input[type="password"],
+div.has-error input[type="email"],
+div.has-error input[type="date"],
+div.has-error select {
+	border: 1px solid #900 !important;
+}

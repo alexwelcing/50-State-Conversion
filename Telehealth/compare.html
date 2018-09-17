@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+iframe.first {
+    width: 49%;
+    float: left;
+    border: none;
+}
+iframe.second{
+    width: 50%;
+    float: left;
+    border:  none;
+}
+iframe.first.selectd-select {
+    height: 100vh;
+}
+iframe.second.selectd-select {
+    height: 100vh;
+}
+.drop_down {
+    width:  100%;
+    text-align:  center;
+    padding: 24px 0 53px;
+}
+
+.drop_down select {padding: 14px 59px;border:1px solid #ccc; margin-left: 10px;font-weight:  600;text-align:  center;font-size:  16px;color:  #004157;}
+.drop_down select:focus, .drop_down select:active {
+    outline: none !important;
+}
+.container {
+    width: 1200px;
+    margin: 15px auto !important;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-sizing: border-box;
+    height:auto;
+}
+.container:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+</style>
+</head>
+    
+    <body>
+        
+        <title>Us States</title>
+
+        <meta charset="utf-8">
+
+        <script src="js/jquery.js"></script>
+        <div class="container">
+        <div class="drop_down">
+        <select id="states1" class="my_slct">
+        	<option value="Alabama-Clean">Alabama</option>
+        	<option value="Alaska-Clean">Alaska</option>
+        	<option value="Arizona-Clean">Arizona</option>
+        	<option value="Arkansas-Clean">Arkansas</option>
+        	<option value="California-Clean">California</option>
+        	<option value="Colorado-Clean">Colorado</option>
+        	<option value="Connecticut-Clean">Connecticut</option>
+        	<option value="Delaware-Clean">Delaware</option>
+        	<option value="Florida-Clear">Florida</option>
+        	<option value="Georgia-Clean">Georgia</option>
+        	<option value="Hawaii-Clean">Hawaii</option>
+        	<option value="Idaho-Clean">Idaho</option>
+        	<option value="Illinois-Clear">Illinois</option>
+        	<option value="Indiana-Clean">Indiana</option>
+        	<option value="Iowa-Clean">Iowa</option>
+        	<option value="Kansas-Clean">Kansas</option>
+        	<option value="Kentucky-Clean">Kentucky</option>
+        	<option value="Louisiana-Clean">Louisiana</option>
+        	<option value="Maine-Clear">Maine</option>
+        	<option value="Maryland-Clean">Maryland</option>
+        	<option value="Massachusetts-Clear">Massachusetts</option>
+        	<option value="Michigan-Clear">Michigan</option>
+        	<option value="Minnesota-Clear">Minnesota</option>
+        	<option value="Mississippi-Clear">Mississippi</option>
+        	<option value="Missouri-Clean">Missouri</option>
+        	<option value="Montana-Clear">Montana</option>
+        	<option value="Nebraska-Clear">Nebraska</option>
+        	<option value="Nevada">Nevada</option>
+        	<option value="New-Hampshire">New Hampshire</option>
+        	<option value="New-Jersey">New Jersey</option>
+        	<option value="New-Mexico">New Mexico</option>
+        	<option value="New-York">New York</option>
+        	<option value="North-Carolina">North Carolina</option>
+        	<option value="North-Dakota">North Dakota</option>
+        	<option value="Ohio">Ohio</option>
+        	<option value="Oklahoma">Oklahoma</option>
+        	<option value="Oregon">Oregon</option>
+        	<option value="Pennsylvania">Pennsylvania</option>
+        	<option value="Rhode Island">Rhode Island</option>
+        	<option value="South Carolina">South Carolina</option>
+        	<option value="South Dakota">South Dakota</option>
+        	<option value="Tennessee">Tennessee</option>
+        	<option value="Texas">Texas</option>
+        	<option value="Utah">Utah</option>
+        	<option value="Vermont">Vermont</option>
+        	<option value="Virginia">Virginia</option>
+        	<option value="Washington-DC-Clean">Washington DC</option>
+        	<option value="Washington">Washington</option>
+        	<option value="West Virginia">West Virginia</option>
+        	<option value="Wisconsin">Wisconsin</option>
+        	<option value="Wyoming">Wyoming</option>
+        </select>
+        
+        <select id="states2" class="my_slct">
+        	<option value="Alabama-Clean">Alabama</option>
+        	<option value="Alaska-Clean">Alaska</option>
+        	<option value="Arizona-Clean">Arizona</option>
+        	<option value="Arkansas-Clean">Arkansas</option>
+        	<option value="California-Clean">California</option>
+        	<option value="Colorado-Clean">Colorado</option>
+        	<option value="Connecticut-Clean">Connecticut</option>
+        	<option value="Delaware-Clean">Delaware</option>
+        	<option value="Florida-Clear">Florida</option>
+        	<option value="Georgia-Clean">Georgia</option>
+        	<option value="Hawaii-Clean">Hawaii</option>
+        	<option value="Idaho-Clean">Idaho</option>
+        	<option value="Illinois-Clear">Illinois</option>
+        	<option value="Indiana-Clean">Indiana</option>
+        	<option value="Iowa-Clean">Iowa</option>
+        	<option value="Kansas-Clean">Kansas</option>
+        	<option value="Kentucky-Clean">Kentucky</option>
+        	<option value="Louisiana-Clean">Louisiana</option>
+        	<option value="Maine-Clear">Maine</option>
+        	<option value="Maryland-Clean">Maryland</option>
+        	<option value="Massachusetts-Clear">Massachusetts</option>
+        	<option value="Michigan-Clear">Michigan</option>
+        	<option value="Minnesota-Clear">Minnesota</option>
+        	<option value="Mississippi-Clear">Mississippi</option>
+        	<option value="Missouri-Clean">Missouri</option>
+        	<option value="Montana-Clear">Montana</option>
+        	<option value="Nebraska-Clear">Nebraska</option>
+        	<option value="Nevada">Nevada</option>
+        	<option value="New-Hampshire">New Hampshire</option>
+        	<option value="New-Jersey">New Jersey</option>
+        	<option value="New-Mexico">New Mexico</option>
+        	<option value="New-York">New York</option>
+        	<option value="North-Carolina">North Carolina</option>
+        	<option value="North-Dakota">North Dakota</option>
+        	<option value="Ohio">Ohio</option>
+        	<option value="Oklahoma">Oklahoma</option>
+        	<option value="Oregon">Oregon</option>
+        	<option value="Pennsylvania">Pennsylvania</option>
+        	<option value="Rhode Island">Rhode Island</option>
+        	<option value="South Carolina">South Carolina</option>
+        	<option value="South Dakota">South Dakota</option>
+        	<option value="Tennessee">Tennessee</option>
+        	<option value="Texas">Texas</option>
+        	<option value="Utah">Utah</option>
+        	<option value="Vermont">Vermont</option>
+        	<option value="Virginia">Virginia</option>
+        	<option value="Washington-DC-Clean">Washington DC</option>
+        	<option value="Washington">Washington</option>
+        	<option value="West Virginia">West Virginia</option>
+        	<option value="Wisconsin">Wisconsin</option>
+        	<option value="Wyoming">Wyoming</option>
+        </select>
+        </div>
+        
+        <div id="loadData">
+            <iframe class="first" src=""></iframe>
+            <iframe class="second" src=""></iframe>
+        </div>
+        </div>
+        
+        <script>
+            jQuery(document).on('change', '#states1', function(){
+                jQuery('.first').addClass('selectd-select');
+                var val = jQuery(this).val();
+                jQuery('#loadData .first').attr('src', val+".html");
+            });
+            
+            jQuery(document).on('change', '#states2', function(){
+                jQuery('.second').addClass('selectd-select');
+                var val = jQuery(this).val();
+                jQuery('#loadData .second').attr('src', val+".html");
+            });
+
+   
+        </script>
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+
+li~li {
+	border-top: 1px solid #e1dfd6;
+}
+
+#menuwrapper ul, #menuwrapper ul li{
+    margin:0;
+	padding: 0px;
+    list-style:none;
+}
+
+#menuwrapper ul li{
+    width:207px;
+    cursor:pointer;
+}
+
+#menuwrapper ul li:hover{
+    position:relative;
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbaa5b', endColorstr='#82722b'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#bbaa5b), to(#82722b)) !important; /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #bbaa5b,  #82722b) !important; /* for firefox 3.6+ */    
+}
+
+#menuwrapper ul li a{
+    padding:5px 15px;
+    color:#13184a;
+    font-size: 12px;
+    display:inline-block;
+    text-decoration:none;
+	line-height: 25px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+
+#menuwrapper ul li a:hover{
+    color:#fff;
+    font-size: 12px;
+    text-decoration:none;
+}
+
+/**** SECOND LEVEL MENU ****/
+#menuwrapper ul li ul{
+    position:absolute;
+	z-index: 3;
+    display:none;
+}
+
+
+#menuwrapper ul li:hover ul{
+    left:205px;
+    top:0px;
+    display:block;
+}
+
+#menuwrapper ul li ul{
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#edece3', endColorstr='#d5d2c2'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#edece3), to(#d5d2c2)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #edece3,  #d5d2c2); /* for firefox 3.6+ */
+	border: 1px solid #fff;
+}
+
+
+/*#menuwrapper ul li:hover ul li:hover{
+    background-color:#b1b536;
+}*/
+
+#menuwrapper ul li ul li a{
+    color:#13184a;
+    display:inline-block;
+    width:200px;
+}
+
+/**** THIRD LEVEL MENU ****/
+
+#menuwrapper ul li:hover ul li ul{
+    position:absolute;
+    display:none;
+}
+
+
+#menuwrapper ul li:hover ul li:hover ul{
+    display:block;
+    left:205px;
+    top:0;
+}
+
+/* background color for the level 3 submenu*/
+
+#menuwrapper ul li:hover ul li:hover ul{
+    width:228px;
+    color: #13184a;
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#edece3', endColorstr='#d5d2c2'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#edece3), to(#d5d2c2)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #edece3,  #d5d2c2); /* for firefox 3.6+ */
+}
+
+/* background color for the level 3 submenu when hovering the menu */
+
+#menuwrapper ul li:hover ul li:hover ul li:hover{
+    color: #fff;
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#edece3', endColorstr='#d5d2c2'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#edece3), to(#d5d2c2)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #edece3,  #d5d2c2); /* for firefox 3.6+ */
+}
+
+
+#menuwrapper ul li:hover ul li:hover ul li a{
+    color:#13184a;
+}
+
+#menuwrapper ul li:hover ul li:hover ul li a:hover{
+    color: #fff;
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbaa5b', endColorstr='#82722b'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#bbaa5b), to(#82722b)) !important; /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #bbaa5b,  #82722b) !important; /* for firefox 3.6+ */    
+}
+
+
+
+/* Clear float */
+.clear{
+    clear:both;
+}

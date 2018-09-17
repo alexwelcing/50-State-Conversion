@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <title>Us States</title>
+
+        <meta charset="utf-8">
+        <style>
+            select#states {
+                width: 100%;
+                height: 40px;
+                float: none;
+                max-width: 350px;
+                display: block;
+                padding: 5px;
+                border: 1px solid #ccc;
+                float: right;
+                   }
+                   .drops {
+    float:  left;
+    width: 100%;
+    margin: 20px 0;
+}
+div#loadData {
+    float: left;
+    width: 100%;
+}
+.left {
+    width: 62%;
+    float: left;
+}
+.ryt a i {
+    font-size: 31px;
+    margin: 3px 0;
+}
+
+.ryt {
+    float:  right;
+    width: 36%;
+}
+            
+            select#states:focus {
+                outline:  none;
+            }
+         svg {
+    margin: 10px 0 !important;
+}
+
+
+.toggllee i {
+    font-size: 30px;
+}
+
+#usaTerritories-map {
+    width: 1000px !important;
+    margin: auto !important;
+    height: 700px !important;
+    margin: 70px auto !important;
+    clear:both;
+}
+.container {
+    position:relative;
+}
+span.my_toggle {
+    position: absolute;
+    right: 30%;
+    top: 19px;
+}
+span.my_toggle i {
+    color: #7ab800;
+    font-size: 40px;
+}
+iframe {
+    height: 100vh;
+}
+.loading {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('images/5.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .9;
+}
+a.intro-c {
+    color: #7ab800;
+    margin: 0;
+    position: absolute;
+    top: -15px;
+    right: 26%;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+.drops {
+    position: relative;
+}
+a.intro-c:hover {
+    color: #7ab800;
+}
+     </style>
+          <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/DesignMode.css" type="text/css" rel="stylesheet">
+    <link href="./css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="./css/bootstrap-additional.css" type="text/css" rel="stylesheet">
+    <link href="./css/HealthInsights.css" type="text/css" rel="stylesheet">
+    <link href="css/newpage.css" rel="stylesheet" />
+    <link href="css/introjs.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/jquery.js"></script>
+        <script src="js/intro.js"></script>
+        <link href="map/jsmaps/jsmaps.css" rel="stylesheet" type="text/css" />
+        <script src="map/jsmaps/jsmaps-libs.js" type="text/javascript"></script>
+        <script src="map/jsmaps/jsmaps-panzoom.js"></script>
+        <script src="map/jsmaps/jsmaps.min.js" type="text/javascript"></script>
+        <script src="map/maps/usaTerritories.js" type="text/javascript"></script>
+        
+       <div class="container">
+           
+           <div id="loader"></div>
+           
+        <div class="drops">
+            <div class="left">
+        <select id="states" data-step="1" data-intro="Select state">
+        	<option value="">Select State</option>
+        	<option value="Alabama-Clean">Alabama</option>
+        	<option value="Alaska-Clean">Alaska</option>
+        	<option value="Arizona-Clean">Arizona</option>
+        	<option value="Arkansas-Clean">Arkansas</option>
+        	<option value="California-Clean">California</option>
+        	<option value="Colorado-Clean">Colorado</option>
+        	<option value="Connecticut-Clean">Connecticut</option>
+        	<option value="Delaware-Clean">Delaware</option>
+        	<option value="Florida-Clear">Florida</option>
+        	<option value="Georgia-Clean">Georgia</option>
+        	<option value="Hawaii-Clean">Hawaii</option>
+        	<option value="Idaho-Clean">Idaho</option>
+        	<option value="Illinois-Clear">Illinois</option>
+        	<option value="Indiana-Clean">Indiana</option>
+        	<option value="Iowa-Clean">Iowa</option>
+        	<option value="Kansas-Clean">Kansas</option>
+        	<option value="Kentucky-Clean">Kentucky</option>
+        	<option value="Louisiana-Clean">Louisiana</option>
+        	<option value="Maine-Clear">Maine</option>
+        	<option value="Maryland-Clean">Maryland</option>
+        	<option value="Massachusetts-Clear">Massachusetts</option>
+        	<option value="Michigan-Clear">Michigan</option>
+        	<option value="Minnesota-Clear">Minnesota</option>
+        	<option value="Mississippi-Clear">Mississippi</option>
+        	<option value="Missouri-Clean">Missouri</option>
+        	<option value="Montana-Clear">Montana</option>
+        	<option value="Nebraska-Clear">Nebraska</option>
+        	<option value="Nevada">Nevada</option>
+        	<option value="New-Hampshire">New Hampshire</option>
+        	<option value="New-Jersey">New Jersey</option>
+        	<option value="New-Mexico">New Mexico</option>
+        	<option value="New-York">New York</option>
+        	<option value="North-Carolina">North Carolina</option>
+        	<option value="North-Dakota">North Dakota</option>
+        	<option value="Ohio">Ohio</option>
+        	<option value="Oklahoma">Oklahoma</option>
+        	<option value="Oregon">Oregon</option>
+        	<option value="Pennsylvania">Pennsylvania</option>
+        	<option value="Rhode-Island">Rhode Island</option>
+        	<option value="South-Carolina">South Carolina</option>
+        	<option value="South-Dakota">South Dakota</option>
+        	<option value="Tennessee">Tennessee</option>
+        	<option value="Texas">Texas</option>
+        	<option value="Utah">Utah</option>
+        	<option value="Vermont">Vermont</option>
+        	<option value="Virginia">Virginia</option>
+        	<option value="Washington-DC-Clean">Washington DC</option>
+        	<option value="Washington">Washington</option>
+        	<option value="West-Virginia">West Virginia</option>
+        	<option value="Wisconsin">Wisconsin</option>
+        	<option value="Wyoming">Wyoming</option>
+        </select>
+        </div>
+        
+        <a class="intro-c" href="javascript:void(0);" onclick="javascript:startTour();"><i class="fa fa-info-circle"></i></a>
+        <div id="generate" data-step="4" data-intro="Download PDF File" class="ryt">
+            <a href="pdf/createPdf.php?value=Alabama-Clean.html" target="_blank" id="generate" title="Export to PDF"><i class="fa fa-file-pdf-o"></i></a>
+        </div>
+        
+        </div>
+        
+        <div class="toggllee"><span data-step="3" data-intro="Click to show hide map" class="my_toggle"><i class="fa fa-globe"></i></span>
+           <div class="jsmaps-wrapper-box"><div data-step="2" data-intro="Click on state" class="jsmaps-wrapper" id="usaTerritories-map"></div>
+        </div>
+            
+         </div>
+        
+        <div id="loadData"></div>
+        
+        
+        </div> 
+        
+        <script>
+            var value,introJ='',step=false;
+            //loadHtml("Alabama-Clean");
+            
+            
+            jQuery(document).on('change', '#states', function(){
+                var val = jQuery(this).val();
+                loadHtml(val);
+            });
+            
+            function loadHtml(dat){
+                jQuery('#loader').addClass('loading');
+                value = dat+".html";
+                //jQuery("#loadData").load(dat);
+                var url = "pdf/createPdf.php?value="+value;
+                jQuery("#generate a").attr('href', url);
+                
+                //if(readCookie('introjs')){
+                    jQuery(".jsmaps-wrapper-box").hide();
+                //}
+                
+                jQuery("#states option").each(function( index ) {
+                    var chk = jQuery(this).val();
+                    if(chk==dat){
+                        jQuery(this).attr('selected', 'selected');
+                    }
+                });
+                
+                
+                //iFrame
+                jQuery("#loadData").html('');
+                jQuery("#loadData").html('<iframe frameBorder="0" id="dataFrame" width="100%" src="'+value+'"></iframe>');
+                setTimeout(function(){
+                    iResize();
+                    //intro js start
+                    if(!readCookie('introjs')){
+                        startTour();
+                    }
+                    //create cookies
+                    createCookie('introjs', $.now(), '365');
+                }, 1500);
+            }
+            
+            
+            function iResize() {
+               var heig = jQuery(window.frames[0].document).height();
+               
+               var hei1 = heig+200;
+               jQuery("#loadData").height(hei1+'px');
+               jQuery("#dataFrame").height(heig+'px');
+               jQuery('#loader').removeClass('loading');
+            }
+
+            
+            jQuery('#usaTerritories-map').JSMaps({
+                map: 'usaTerritories',
+                mapWidth: 800, 
+                mapHeight: 600,
+                stateClickAction : "none",
+                onStateClick : function(res) {
+                    loadHtml(res.url);jQuery('#loader').addClass('loading');
+                    if(step){
+                        introJ.goToStep(3).start().previousStep();
+                        step=false;
+                    }
+                }
+            });
+      
+            jQuery(".my_toggle").click(function(){
+                jQuery(".jsmaps-wrapper-box").slideToggle( "slow" );
+            });
+        
+    		function startTour() {
+    			introJ = introJs().onchange(function(targetElement) {
+                    switch(jQuery(targetElement).attr("data-step")) {
+                        case "2":
+                        step = true;
+                        jQuery(".jsmaps-wrapper-box").show();
+                        break;
+                    }
+                }).start();
+    		}
+
+    		
+    		// Cookies
+            function createCookie(name, value, days) {
+                if(readCookie('introjs')){
+                    return;
+                }
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    var expires = "; expires=" + date.toGMTString();
+                }
+                else var expires = "";               
+    
+                document.cookie = name + "=" + value + expires + "; path=/";
+            }
+    
+            function readCookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+	
+	    </script>
+
+
+    </body>
+</html>

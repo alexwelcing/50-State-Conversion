@@ -1,0 +1,24 @@
+[01-Aug-2018 07:51:02 Etc/GMT] PHP Fatal error:  Uncaught exception 'Dompdf\Exception' with message 'Permission denied on ../Alabama-Clean.html. The file could not be found under the directory specified by Options::chroot.' in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/vendor/dompdf/dompdf/src/Dompdf.php:366
+Stack trace:
+#0 /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/vendor/dompdf/dompdf/src/Dompdf.php(333): Dompdf\Dompdf->loadHtmlFile('../Alabama-Clea...')
+#1 /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/createPdf.php(8): Dompdf\Dompdf->load_html_file('../Alabama-Clea...')
+#2 {main}
+  thrown in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/vendor/dompdf/dompdf/src/Dompdf.php on line 366
+[01-Aug-2018 07:51:22 Etc/GMT] PHP Fatal error:  Uncaught exception 'Dompdf\Exception' with message 'Permission denied on ./Alabama-Clean.html. The file could not be found under the directory specified by Options::chroot.' in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/vendor/dompdf/dompdf/src/Dompdf.php:366
+Stack trace:
+#0 /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/vendor/dompdf/dompdf/src/Dompdf.php(333): Dompdf\Dompdf->loadHtmlFile('./Alabama-Clean...')
+#1 /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/createPdf.php(8): Dompdf\Dompdf->load_html_file('./Alabama-Clean...')
+#2 {main}
+  thrown in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/vendor/dompdf/dompdf/src/Dompdf.php on line 366
+[01-Aug-2018 08:11:04 Etc/GMT] PHP Notice:  Undefined index: value in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/createPdf.php on line 7
+[01-Aug-2018 08:11:25 Etc/GMT] PHP Notice:  Undefined index: value in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/createPdf.php on line 7
+[06-Aug-2018 12:30:25 Etc/GMT] PHP Warning:  file_get_contents(../Georgia-Clean): failed to open stream: No such file or directory in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/createPdf.php on line 11
+[06-Aug-2018 12:30:36 Etc/GMT] PHP Warning:  file_get_contents(../Georgia-Clean): failed to open stream: No such file or directory in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/createPdf.php on line 11
+[07-Aug-2018 12:02:59 Etc/GMT] PHP Fatal error:  Class 'Options' not found in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/createPdf.php on line 6
+[07-Aug-2018 14:35:57 Etc/GMT] PHP Warning:  file_get_contents(../Kansas-Clean): failed to open stream: No such file or directory in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/createPdf.php on line 12
+[08-Aug-2018 13:19:05 Etc/GMT] PHP Warning:  file_get_contents(../Nebraska-Clear): failed to open stream: No such file or directory in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/createPdf.php on line 12
+[08-Aug-2018 13:19:55 Etc/GMT] PHP Warning:  file_get_contents(../Minnesota-Clear): failed to open stream: No such file or directory in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/createPdf.php on line 12
+[08-Aug-2018 13:20:47 Etc/GMT] PHP Warning:  file_get_contents(../Colorado-Clean): failed to open stream: No such file or directory in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/createPdf.php on line 12
+[08-Aug-2018 13:24:43 Etc/GMT] PHP Warning:  file_get_contents(../Alaska-Clean): failed to open stream: No such file or directory in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/createPdf.php on line 12
+[08-Aug-2018 13:34:04 Etc/GMT] PHP Warning:  file_get_contents(../North-Dakota): failed to open stream: No such file or directory in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/createPdf.php on line 12
+[21-Aug-2018 09:47:49 Etc/GMT] PHP Warning:  file_get_contents(../Missouri-Clean): failed to open stream: No such file or directory in /home/paradvvz/public_html/development/Telehealth-master-31-jul/pdf/createPdf.php on line 12
